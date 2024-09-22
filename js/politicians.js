@@ -111,15 +111,83 @@ function shuffleArray(array) {
 
 const quotes = politicians.quote;
 const answers = politicians.options;
-const questionElement = document.getElementById('question-text');
-const answerButtons = document.querySelectorAll('.answer-btn');
+const gameContainer = document.getElementById('container');
+const quoteElement = document.getElementById('quote');
+const answerButtons = document.querySelectorAll('.answer-grid');
+const scoreElement = document.getElementById('score');
+const timerElement = document.getElementById('timer');
 
-for (let i = 0; i < quotes.length; i++) {
-    questionElement.textContent = quotes[i];
-    console.log(questionElement.textContent);
-    for (let j = 0; j < answerButtons.length; j++) {
-        answerButtons[j].textContent = answers[i][j];
-        console.log(answerButtons[j].textContent);
+let currentQuoteIndex = 0;
+
+let score = 0;
+let timeLeft = 30;
+let timerInterval;
+
+const startTimer = () => {
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = `Timer: ${timeLeft}`;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            endGame();
+        }
+    }, 1000);
+}
+
+const endGame = () => {
+    clearInterval(timerInterval);
+    quoteElement.textContent = "Time's up!";
+    answerButtons.innerHTML = '';
+    quoteElement.textContent = `Final Score: ${score}`;
+}
+
+const resetTimer = () => {
+    resetTimer();
+    startTimer();
+    const displayQuote = () => {
+        const currentQuote = politicians[currentQuoteIndex];
+        quoteElement.textContent = currentQuote.quote;
+        answerButtons.innerHTML = '';    
+        currentQuote.options.forEach(option => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.addEventListener('click', () => checkAnswer(option));
+            optionsElement.appendChild(button);
+        });
+    };
+}    
+    
+const checkAnswer = (selectedAuthor) => {
+    const currentQuote = politicians[currentQuoteIndex];
+    if (selectedAuthor === currentQuote.author) {
+        resultElement.textContent = 'Correct!';
+        score += 10;
+        scoreElement.textContent = `Score: ${score}`;
+        timeLeft += 5;
+        timerElement.textContent = `Time Left: ${timeLeft}`;
+    } else {
+        resultElement.textContent = 'Incorrect!, Try again';
+        timeLeft -= 3;
+        timerElement.textContent = `Time Left: ${timeLeft}`;
     }
-};
+    setTimeout(() => {
+        resultElement.textContent = '';
+        moveToNextQuote();
+    }, 1500);
+}    
+
+displayQuote();
+
+const moveToNextQuote = () => {
+    currentQuoteIndex++;
+    if (currentQuoteIndex >= politicians.length) {
+        currentQuoteIndex = 0;
+    }
+    displayQuote(); 
+}
+
+
+
+
+
 
