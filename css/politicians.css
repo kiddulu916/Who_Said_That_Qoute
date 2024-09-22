@@ -1,0 +1,36 @@
+body  {
+    background-color: #69ca46;
+}
+
+.container {
+    display: flexbox;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+  
+  .question-box {
+    background-color: #42adff;
+    border: 8px solid #007ade;
+    border-radius: 24px;
+    width: 100%;
+    padding: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+  
+  .answer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+ .answer-btn {
+    background-color: #42adff;
+    border: 8px solid #007ade;
+    border-radius: 24px;
+    padding: 4rem;
+    box-sizing: border-box;
+}
+

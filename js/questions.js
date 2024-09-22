@@ -1,4 +1,4 @@
-const qoutesByCategory = {
+const quotesByCategory = {
     politiciansAndActivists: [
         {
             qoute: "If I cannot do great things, I can do small things in a great way.",
@@ -522,34 +522,299 @@ const qoutesByCategory = {
             options: shuffleArray(["Confucius", "Aristotle", "Elie Wiesel", "Socrates"])
         },
     ],
-    
+    scientistsAndEngineers: [
+        {
+            qoute: "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
+            author: "Albert Einstein",
+            options: shuffleArray(["Albert Einstein", "Mae Jemison", "Steve Jobs", "Thomas Edison"])
+        },
+        {
+            qoute: "Never limit yourself because of others’ limited imagination; never limit others because of your own limited imagination",
+            author: "Mae Jemison",
+            options: shuffleArray(["Mae Jemison", "Isaac Newton", "Marie Curie", "Otto Hahn"])
+        },
+        {
+            qoute: "The people who are crazy enough to think they can change the world are the ones who do.",
+            author: "Steve Jobs",
+            options: shuffleArray(["Steve Jobs", "Sabrina Pasterski", "Leonardo da Vinci", "George Stephenson"])
+        },
+        {
+            qoute: "A person who never made a mistake never tried anything new.",
+            author: "Albert Einstein",
+            options: shuffleArray(["Albert Einstein", "J.J. Thomson", "Ernest Rutherford", "John Dalton"])
+        },
+        {
+            qoute: "Opportunity is missed by most people because it is dressed in overalls and looks like work.",
+            author: "Thomas Edison",
+            options: shuffleArray(["Thomas Edison", "Luis Alvarez", "Andre-Marie Ampere", "Alhazen"])
+        },
+        {
+            qoute: "We must believe that we are gifted for something, and that this thing, at whatever cost, must be attained.",
+            author: "Marie Curie",
+            options: shuffleArray(["Marie Curie", "Carl Anderson", "Archimedes", "Amedeo Avogadro"])
+        },
+        {
+            qoute: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+            author: "Albert Einstein",
+            options: shuffleArray(["Albert Einstein", "Charles Barkla", "Daniel Bernoulli", "Aage Bohr"])
+        },
+        {
+            qoute: "We live in a society exquisitely dependent on science and technology, in which hardly anyone knows anything about science and technology.",
+            author: "Carl Sagan",
+            options: shuffleArray(["Carl Sagan", "Niels Bohr", "S. N. Bose", "Lawrence Bragg"])
+        },
+        {
+            qoute: "Everything is theoretically impossible until it is done.",
+            author: "Robert A. Heinlein",
+            options: shuffleArray(["Robert A. Heinlein", "John Cockcroft", "Subrahmanyan Chandrasekhar", "James Chadwick"])
+        },
+        {
+            qoute: "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.",
+            author: "Isaac Asimov",
+            options: shuffleArray(["Isaac Asimov", "Paul Dirac", "Democritus", "Arthur Compton"])
+        },
+        {
+            qoute: "If we knew what it was we were doing, it would not be called research, would it?",
+            author: "Albert Einstein",
+            options: shuffleArray(["Albert Einstein", "Micheal Faraday", "Robert A. Heinlein", "Carl Sagan"])
+        },
+        {
+            qoute: "There are in fact two things, science and opinion; the former begets knowledge, the latter ignorance.",
+            author: "Hippocrates",
+            options: shuffleArray(["Hippocrates", "Galileo Galilei", "Carl Gauss", "Willard Gibbs"])
+        },
+        {
+            qoute: "Science is magic that works.",
+            author: "Kurt Vonnegut",
+            options: shuffleArray(["Kurt Vonnegut", "William Gilbert", "Albert Einstein", "Joseph Henry"])
+        },
+        {
+            qoute: "Until man duplicates a blade of grass, nature can laugh at his so-called scientific knowledge.",
+            author: "Thomas Edison",
+            options: shuffleArray(["Thomas Edison", "David Hilbert", "Hippocrates", "Heinrich Hertz"])
+        },
+        {
+            qoute: "In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual.",
+            author: "Galileo Galilei",
+            options: shuffleArray(["Galileo Galilei", "Robert Hooke", "Kurt Vonnegut", "Fred Hoyle"])
+        },
+        {
+            qoute: "The scientist only imposes two things, namely truth and sincerity, imposes them upon himself and upon other scientists.",
+            author: "Erwin Schrödinger",
+            options: shuffleArray(["Erwin Schrödinger", "Irene Joliot-Curie", "Thomas Edison", "Pyotr Kapitsa"])
+        },
+        {
+            qoute: "The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries of its existence.",
+            author: "Nikola Tesla",
+            options: shuffleArray(["Nikola Tesla", "Michio Kaku", "Galileo Galilei", "Joseph-Louis Lagrange"])
+        },
+        {
+            qoute: "It is strange that only extraordinary man-made the discoveries twitch later appear so easy and simple.",
+            author: "George C. Lichtenberg",
+            options: shuffleArray(["George C. Lichtenberg", "Johannes Kepler", "Thomas Berger", "Edward Teller"])
+        },
+        {
+            qoute: "Art is the tree of life. Science is the tree of death.",
+            author: "William Blake",
+            options: shuffleArray(["William Blake", "John Mitchell", "Ernest Lawrence", "Inge Lehmann"])
+        },
+        {
+            qoute: "The art and science of asking questions is the source of all knowledge.",
+            author: "Thomas Berger",
+            options: shuffleArray(["Thomas Berger", "Lise Meitner", "George C. Lichtenberg", "James Clerk Maxwell"])
+        },
+        {
+            qoute: "The science of today is the technology of tomorrow.",
+            author: "Edward Teller",
+            options: shuffleArray(["Edward Teller", "Henry Moseley", "Emmy Noether", "Hans Christian Oersted"])
+        },
+        {
+            qoute: "Nothing has such power to broaden the mind as the ability to investigate systematically and truly all that comes under thy observation in life.",
+            author: "Marcus Aurelius",
+            options: shuffleArray(["Marcus Aurelius", "John Philoponus", "Max Planck", "William Blake"])
+        },
+        {
+            qoute: "Rockets are cool. There's no getting around that.",
+            author: "Elon Musk",
+            options: shuffleArray(["Elon Musk", "C. V. Raman", "Edward Teller", "Thomas Berger"])
+        },
+        {
+            qoute: "Equipped with his five senses, man explores the universe around him and calls the adventure Science.",
+            author: "Edwin Hubble",
+            options: shuffleArray(["Edwin Hubble", "Abdus Salem", "Marcus Aurelius", "Ernest Rutherford"])
+        },
+        {
+            qoute: "Science is just pure empiricism, and by virtue of its method, it excludes metaphysics.",
+            author: "Steve Martin",
+            options: shuffleArray(["Steve Martin", "Niccolo Tartaglia", "Elon Musk", "J. J. Thomson"])
+        },
+        {
+            qoute: "Science is the acceptance of what works and the rejection of what does not. That needs more courage than we might think.",
+            author: "Jacob Bronowski",
+            options: shuffleArray(["Jacob Bronowski", "Evangelista Torricelli", "Charles Townes", "Ernest Walton"])
+        }
+    ],
+    spiritualFigures: [
+        {
+            qoute: "Be the change that you wish to see in the world.",
+            author: "Mahatma Ghandi",
+            options: shuffleArray(["Mahatma Ghandi", "The Dalai Lama", "Camilla Eyring Kimball", "Mother Theresa"])
+        },
+        {
+            qoute: "Happiness is not something readymade; it comes from your own actions.",
+            author: "The Dalai Lama",
+            options: shuffleArray(["The Dalai Lama", "Sri Aurobindo", "Ramana Maharshi", "Paramahansa Yogananda"])
+        },
+        {
+            qoute: "You do not find the happy life. You make it.",
+            author: "Camilla Eyring Kimball",
+            options: shuffleArray(["Camilla Eyring Kimball", "Buddha", "Eckhart Tolle", "Rumi"])
+        },
+        {
+            qoute: "The miracle is not that we do this work, but that we are happy to do it.",
+            author: "Mother Theresa",
+            options: shuffleArray(["Mother Theresa", "Meister Eckhart", "Thich Nhat Hanh", "St. Francis of Assisi"])
+        },
+        {
+            qoute: "Tough times never last, but tough people do.",
+            author: "Robert H. Schuller",
+            options: shuffleArray(["Robert H. Schuller", "Billy Graham", "Joseph Campbell", "Carl Jung"])
+        },
+        {
+            qoute: "There is no other spiritual teacher than you own soul.",
+            author: "Swami Vivekananda",
+            options: shuffleArray(["Swami Vivekananda", "Jiddu Krishnamurti", "Leo Tolstoy", "Maharishi Mahesh Yogi"])
+        },
+        {
+            qoute: "I close my eyes in order to see.",
+            author: "Paul Gauguin",
+            options: shuffleArray(["Paul Gauguin", "Kahlil Gibran", "Sri Chinmoy", "Friedrich Nietzsche"])
+        },
+        {
+            qoute: "Out of difficulties grow miracles.",
+            author: "Jean de la Bruyere",
+            options: shuffleArray(["Jean de la Bruyere", "The Buddha", "Lao Tzu", "Epictetus"])
+        },
+        {
+            qoute: "We are not human beings having a spiritual experience; we are spiritual beings having a human experience.",
+            author: "Pierre Teilhard de Chardin",
+            options: shuffleArray(["Pierre Teilhard de Chardin", "St. Augustine", "St. Thomas Aquinas", "St. Teresa of Avila"])
+        },
+        {
+            qoute: "When you connect to the silence within you, that is when you can make sense of the disturbance going on around you.",
+            author: "Stephen Richards",
+            options: shuffleArray(["Stephen Richards", "Anthony de Mello", "Marianne Williamson", "Neale Donald Walsch"])
+        },
+        {
+            qoute: "Quiet the mind and the soul will speak.",
+            author: "Ma Jaya Sati Bhagavati",
+            options: shuffleArray(["Ma Jaya Sati Bhagavati", "Amma", "Mata Amritanandamayi", "Sri Sri Ravi Shankar"])
+        },
+        {
+            qoute: "You will never be able to escape from your heart. So it is better to listen to what it has to say.",
+            author: "Paulo Coelho",
+            options: shuffleArray(["Paulo Coelho", "Oscar Wilde", "Rabindranath Tagore", "Fyodor Dostoevsky"])
+        },
+        {
+            qoute: "A single event can awaken within us a stranger totally unknown to us. To live is to be slowly born.",
+            author: "Antoine de Saint-Exupery",
+            options: shuffleArray(["Antoine de Saint-Exupery", "Henry David Thoreau", "Walt Whitman", "Ralph Waldo Emerson"])
+        },
+        {
+            qoute: "Living in the present moment creates the experience of eternity.",
+            author: "Deepak Chopra",
+            options: shuffleArray(["Deepak Chopra", "Eckhart Tolle", "Thich Nhat Hanh", "David Bohm"])
+        },
+        {
+            qoute: "I am not my thoughts, emotions, sense perceptions, and experiences. I am not the content of my life. I am Life. I am the space in which all things happen. I am consciousness. I am the Now. I Am.",
+            author: "Eckhart Tolle",
+            options: shuffleArray(["Eckhart Tolle", "Nisargadatta Maharaj", "Ramana Maharshi", "Krishnamurti"])
+        },
+        {
+            qoute: "Just as a candle cannot burn without fire, man cannot live without a spiritual life.",
+            author: "Buddha",
+            options: shuffleArray(["Buddha", "Confucius", "Lao Tzu", "Mencius"])
+        },
+        {
+            qoute: "To speak gratitude is courteous and pleasant, but to live gratitude is to touch heaven.",
+            author: "Johannes A. Gaertner",
+            options: shuffleArray(["Johannes A. Gaertner", "Rumi", "Chuang Tzu", "Sri Aurobindo"])
+        },
+        {
+            qoute: "What drains your spirit drains your body. What fuels your spirit fuels your body.",
+            author: "Caroline Myss",
+            options: shuffleArray(["Caroline Myss", "Mata Amritanandamayi", "Ramana Maharshi", "Krishnamurti"])
+        },
+        {
+            qoute: "Learn to get in touch with the silence within yourself and know that everything in this life has a purpose. There are no mistakes, no coincidences. All events are blessings given to us to learn from.",
+            author: "Elizabeth Kübler-Ross",
+            options: shuffleArray(["Elizabeth Kübler-Ross", "Osho", "Meister Eckhart", "Eckhart Tolle"])
+        },
+        {
+            qoute: "The soul is placed in the body like a rough diamond and must be polished, or the luster of it will never appear.",
+            author: "Daniel Defoe",
+            options: shuffleArray(["Daniel Defoe", "St. Francis of Assisi", "Meister Eckhart", "Sri Aurobindo"])
+        },
+        {
+            qoute: "More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate.",
+            author: "Roy T. Bennett",
+            options: shuffleArray(["Roy T. Bennett", "Dalai Lama", "Pope Francis", "Mother Theresa"])
+        },
+        {
+            qoute: "Don’t ever discount the wonder of your tears. They can be healing waters and a stream of joy. Sometimes they are the best words the heart can speak.",
+            author: "William Paul Young",
+            options: shuffleArray(["William Paul Young", "Rumi", "Hafiz", "Kabir"])
+        },
+        {
+            qoute: "Happy people build their inner world; unhappy people blame their outer world.",
+            author: "Dalai Lama",
+            options: shuffleArray(["Dalai Lama", "Epictetus", "Jean-Paul Sartre", "Martin Heidegger"])
+        },
+        {
+            qoute: "Realize deeply that the present moment is all you have. Make the now the primary focus of your life.",
+            author: "Eckhart Tolle",
+            options: shuffleArray(["Eckhart Tolle", "Buddha", "Krishna", "Lao Tzu"])
+        },
+        {
+            qoute: "You and your purpose in life are the same thing. Your purpose is to be you.",
+            author: "George Alexiou",
+            options: shuffleArray(["George Alexiou", "Sri Aurobindo", "Jean-Paul Sartre", "Simone de Beauvoir"])
+        },
+        {
+            qoute: "Relax into the moment and let the universe do the driving. If there was a secret to happiness in life, I’d say that was it.",
+            author: "Jed McKenna",
+            options: shuffleArray(["Jed McKenna", "Alan Watts", "Ram Dass", "Terence McKenna"])
+        },
+        {
+            qoute: "Do anything, but let it produce joy.",
+            author: "Walt Whitman",
+            options: shuffleArray(["Walt Whitman", "Henry David Thoreau", "Ralph Waldo Emerson", "Emily Dickinson"])
+        },
+        {
+            qoute: "What each of us believes in is up to us, but life is impossible without believing in something.",
+            author: "Kentetsu Takamori",
+            options: shuffleArray(["Kentetsu Takamori", "Immanuel Kant", "Jean-Paul Sartre", "Martin Heidegger"])
+        },
+        {
+            qoute: "Inside us there is something that has no name, that something is what we are.",
+            author: "Jose Saramago",
+            options: shuffleArray(["Jose Saramago", "Albert Camus", "Jean-Paul Sartre", "Martin Heidegger"])
+        },
+        {
+            qoute: "When a person responds to the joys and sorrows of others as if they were his own, he has attained the highest state of spiritual union.",
+            author: "Lord Krishna",
+            options: shuffleArray(["Lord Krishna", "Buddha", "Lao Tzu", "Confucius"])
+        },
+        {
+            qoute: "I think a spiritual journey is not so much a journey of discovery. It’s a journey of recovery. It’s a journey of uncovering your own inner nature. It’s already there.",
+            author: "Billy Corgan",
+            options: shuffleArray(["Billy Corgan", "Albert Einstein", "Dalai Lama", "Jean-Paul Sartre"])
+        }
+        
+    ]
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+export const qoutesByCategory = quotesByCategory;
 
 function shuffleArray(array) {
     let currentIndex = array.length,  randomIndex;

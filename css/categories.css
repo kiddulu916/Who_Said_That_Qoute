@@ -1,0 +1,83 @@
+html {
+
+}
+
+body {
+    background-color: #69ca46;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.categories {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #42adff;
+    border: 8px solid #007ade;
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 3rem;
+    box-shadow: 12px 12px 12px #00457d;
+}
+
+.cat-title {
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-size: 3.5rem;
+    font-style: bold;
+    margin-top: .5rem;
+}
+
+.cat-explanation {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.25rem;
+    font-style: bold;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    position: relative;
+    justify-content: space-around
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #005499;
+}
+
+#politians {
+    margin-top: 3rem;
+}
+
+#spiritual {
+    padding-bottom: 3rem;
+}

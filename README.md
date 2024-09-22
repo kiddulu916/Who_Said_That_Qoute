@@ -45,23 +45,6 @@ If answered correctly you will get 10 points. See how many points you can get bu
 + Authors/Journalist/Poets
 + Spiritual/Religious figures
 
-***Qoutes From Scientist/Physicists/Engineers***
-"Never limit yourself because of others’ limited imagination; never limit others because of your own limited imagination" —Mae Jemison
-"The people who are crazy enough to think they can change the world are the ones who do." —Steve Jobs
-"Opportunity is missed by most people because it is dressed in overalls and looks like work." —Thomas Edison
-"We must believe that we are gifted for something, and that this thing, at whatever cost, must be attained." —Marie Curie
-"A person who never made a mistake never tried anything new." —Albert Einstein 
-"Life is like riding a bicycle. To keep your balance, you must keep moving." —Albert Einstein 
-“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.” — Albert Einstein
-
-
-***Qoutes From Spiritual/Religious Figures***
-"Be the change that you wish to see in the world." —Mahatma Ghandi
-"Happiness is not something readymade; it comes from your own actions." —The Dalai Lama 
-"You do not find the happy life. You make it." —Camilla Eyring Kimball 
-"The miracle is not that we do this work, but that we are happy to do it." —Mother Theresa 
-"Tough times never last, but tough people do." —Robert H. Schuller 
-“Happiness is not something ready-made. It comes from your own actions.” — the Dalai Lama
 
 
 ***Qoutes From Entrepreneurs***
@@ -81,8 +64,3 @@ If answered correctly you will get 10 points. See how many points you can get bu
 + "Optimism is a happiness magnet. If you stay positive, good things and good people will be drawn to you." —Mary Lou Retton 
 + "Always work hard and have fun in what you do because I think that's when you're more successful. You have to choose to do it." —Simone Biles 
 
-***Qoute Sources***
-+ [Good Housekeeping Health/wellness][goodHousekeeping]
-+ 
-
-[goodHousekeeping]: https://www.goodhousekeeping.com/health/wellness/g2401/inspirational-quotes/?utm_source=google&utm_medium=cpc&utm_campaign=mgu_ga_ghk_md_dsa_prog_org_us_g2401&gad_source=1&gclid=CjwKCAjwl6-3BhBWEiwApN6_koGP68zlEqpgG72bAPtj74_hxQ-k7QGCBs12y-dxuuQXNNS4C2QTjxoCjuoQAvD_BwE "goodHousekeeping" 
