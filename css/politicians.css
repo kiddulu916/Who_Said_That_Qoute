@@ -9,7 +9,7 @@ body  {
     margin: 0 auto;
 }
   
-#timer{ 
+.timer{ 
   display: flex;
   position: relative; 
   color: white;
@@ -21,7 +21,7 @@ body  {
   padding: 0;
 }
 
-#score {
+.score {
   display: flex;
   position: relative;
   color: white;
