@@ -1,4 +1,4 @@
-const politicians = politicians [
+const politicians = [
     {
         quote: "If I cannot do great things, I can do small things in a great way.",
         author: "Martin Luther King, Jr.",
@@ -91,6 +91,7 @@ const politicians = politicians [
     }
 ];
 
+
 function shuffleArray(array) {
     let currentIndex = array.length,  randomIndex;
 
@@ -116,7 +117,7 @@ const quoteElement = document.getElementById('quote');
 const answerButtons = document.querySelectorAll('.answer-grid');
 const scoreElement = document.getElementById('score');
 const timerElement = document.getElementById('timer');
-
+console.log(quotes)
 let currentQuoteIndex = 0;
 
 let score = 0;
@@ -185,9 +186,6 @@ const moveToNextQuote = () => {
     }
     displayQuote(); 
 }
-
-
-
 
 
 
