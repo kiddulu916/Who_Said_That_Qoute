@@ -128,6 +128,8 @@ let selectedQuoteOptions;
 
 // Empty interchangeable variable to store the correct author of the active quote
 let correctAnswer;
+let correctAnswerLower = correctAnswer.trim().toLowerCase();
+let clickedAnswer;
 
 // Useful variables for the logistics of the game 
 let timer;
@@ -144,17 +146,17 @@ const timerBox = document.getElementById('timer')
 const scoreBox = document.getElementById('score')
 
 // Function to select a random quote from the previously gathered "quotes" array.
-function getRanQuote() {
-
+const getRanQuote = () => {
+    
     // Generates a random number equal to the length of the quotes array
     const randomIndex = Math.floor(Math.random() * quotes.length);
-
+    
     // Selects a random quote by using the randomIndex variable
     selectedRanQuote = quotes[randomIndex];
-
+    
     //selected quote index in the quotes array
-    const selectedQuoteIndex = quotes.indexOf(selectedRanQuote);
-
+    let selectedQuoteIndex = quotes.indexOf(selectedRanQuote);
+    
     // Removes the selected quote from the quotes array
     quotes.splice(selectedQuoteIndex, 1);
     
@@ -172,7 +174,7 @@ function getRanQuote() {
 }
 
 // Function to shuffle the options array
-function shuffleOptions(selectedQuoteOptions) {
+const shuffleOptions = (selectedQuoteOptions) => {
     for (let i = selectedQuoteOptions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [selectedQuoteOptions[i], selectedQuoteOptions[j]] = [selectedQuoteOptions[j], selectedQuoteOptions[i]];
@@ -188,7 +190,7 @@ function displayInDOM() {
     
     // Shuffle the selected quote's options
     selectedQuoteOptions = shuffleOptions(selectedQuoteOptions);
-
+    
     // Assign each option to a button
     answerBtn1.textContent = selectedQuoteOptions[0];
     answerBtn2.textContent = selectedQuoteOptions[1];
@@ -196,111 +198,112 @@ function displayInDOM() {
     answerBtn4.textContent = selectedQuoteOptions[3]; 
 }
 
+//Function to start, track, and stop the timer
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft -= 1;
+        timerBox.textContent = `Time Left: ${timeLeft} seconds`;
+        if (timeLeft <= 0) {
+            quoteBox.innerHTML = 'Time is up!';
+            stopTimer();
+        }     
+    }, 1000);
+}
+
+
+// Function to stop the timer
+function stopTimer() {
+    clearInterval(timer);
+}
+
+// Function to reset the timer
+function resetTimer() {
+    stopTimer();
+    timeLeft = 30;
+    timerBox.textContent = `Time Left: ${timeLeft} seconds`;
+    if (!timer) {
+        startTimer();
+    }
+}
+
+function minusSeconds() {
+    timeLeft -= 5;
+}
+
+// Function to add points to the score
+function addPoints() {
+    score += 10;
+    scoreBox.textContent = 'Your Score: ' + score;
+}
+
+// Function to reset the score
+function resetScore() {
+    score = 0;
+    scoreBox.textContent = 'Your Score: ' + score;
+}
+
+//Function to handle click events for each answer button
+const handleAnswerClick = () => {
+    getRanQuote();
+    displayInDOM();
+    [answerBtn1, answerBtn2, answerBtn3, answerBtn4].forEach((btn) => {
+        btn.addEventListener('click', () => {
+            
+            // Assigns the clicked answer with the btn text content
+            clickedAnswer = btn.textContent.trim().toLowerCase();
+        });
+    });
+};
+
+// Function to compare the clicked answer with the correct answer
+function compareAnswer() {
+    if (clickedAnswer === correctAnswerLower) {
+        setTimeout(() => {    
+            addPoints();
+            quoteBox.innerHTML = '<img src="../../images/right.png" alt="correct">';
+            getNewQuote();
+        }, 2000);
+    } else {
+        setTimeout(() => {  
+            minusSeconds();
+            quoteBox.innerHTML = '<img src="../../images/wrong.png" alt="incorrect">';
+        }, 2000);
+        quoteBox.innerHTML = selectedRanQuote;
+        handleAnswerClick();
+        compareAnswer();
+    }
+}
+
+// Function to grab a new quote
+function getNewQuote() {
+    resetTimer();
+    if (!timer) {
+        startTimer();
+    }
+    handleAnswerClick();
+    compareAnswer();
+}
+
+// Function for game over
+function gameOver() {
+    stopTimer();
+    quoteBox.innerHTML = 'Game Over!';
+    scoreBox.textContent = 'Your Score: ' + score;
+    document.getElementById('gameover-btns').classList.add('show');
+}
 
 // Function to start the game and the game operation
 function startGame() {
-    
-    // Selects a random quote
-    getRanQuote();
-
-    // Displays and resets the quote and its options
-    displayInDOM();
-
-
-    // Function to start, track, and stop the timer
-    timer = setInterval(() => {
-        timeLeft -= 1;
-
-        // Displays the time left in the timer box
-        timerBox.textContent = `Time Left: ${timeLeft} seconds`;
-        
-        // Checks if the time is up
-        if (timeLeft === 0) {
-            
-            // Displays the time's up message where the quote is displayed
-            quoteBox.innerHTML = 'Time\'s up!';
-            
-            // Stops the timer
-            clearInterval(timer);
-
-            // Display the score with no points gained
-            scoreBox.textContent = 'Your Score: ' + score;
+    if (quotes.length > 0) {
+        if (!timer) {
+            startTimer();
         }
-    }, 1000);
-            
-            // Add event listener to each answer button
-    [answerBtn1, answerBtn2, answerBtn3, answerBtn4].forEach((btn) => {
-        btn.addEventListener('click', () => {
-                
-            // Assigns the clicked answer with the btn text content
-            const clickedAnswer = btn.textContent.trim().toLowerCase();
-                
-            // Converts the correct answer to lowercase
-            const correctAnswerLower = correctAnswer.trim().toLowerCase();
-                
-            // Checks if the clicked answer was correct
-            if (clickedAnswer === correctAnswerLower) {
-                        
-                // Stops the timer
-                clearInterval(timer);
-                
-                // Incresses the score by 10
-                score += 10;
-
-                // Displays the answer was correct and increases the score
-                quoteBox.innerHTML = '<img src="../../images/right.png" alt="You Are Correct!">';
-
-                // Pause timer a few seconds before restarting the timer
-                setTimeout(() => {
-                    scoreBox.textContent = 'Your Score: ' + score;
-                    // Resets the timer
-                    timeLeft = 30;
-                    startGame();
-                }, 2000);
-            
-            } else {
-                
-                // Displays the answer was wrong, No points gained
-                quoteBox.innerHTML = '<img src="../../images/wrong.png" alt="You Are Wrong!">';
-                
-                // Decreases the time left by 5 seconds
-                timeLeft = Math.max(0, timeLeft - 5);
-                
-                // Pause timer a few seconds before continuing the timer
-                setTimeout(() => {
-                    getRanQuote();
-                    displayInDOM();
-                }, 2000);
-
-                // Checks if the time is up
-                if (timeLeft === 0) {
-            
-                    // Displays the time's up message where the quote is displayed
-                    quoteBox.innerHTML = 'Time\'s up!';
-            
-                    // Stops the timer
-                    clearInterval(timer);
-
-                    // Display the score with no points gained
-                    scoreBox.textContent = 'Your Score: ' + score;
-                    
-                }
-            }
-        });
-    });
-                
-    // Display score
-    scoreBox.textContent = 'Your Score: ' + score;
-
-    if (quotes.length > 0 ) {
-        setTimeout(() => {
-            getRanQuote();
-            displayInDOM();
-        }, 1000);
+        handleAnswerClick();
+        compareAnswer();
     } else {
-        clearInterval(timer);
-        quoteBox.innerHTML = 'GameOver';
+        gameOver();
     }
 }
+
 // Start the game
 startGame();
