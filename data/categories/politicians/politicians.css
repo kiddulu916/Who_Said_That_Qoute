@@ -1,0 +1,135 @@
+html {
+  background-color: #69ca46;
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+.time-score-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timer {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.score {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.quote {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #42adff;
+  border: 8px solid #007ade;
+  border-radius: 24px;
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answer-grid {
+  display:grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.answer-btn {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #42adff;
+  border: 8px solid #007ade;
+  border-radius: 24px;
+  width: 100%;
+  height: 5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answer-btn:hover {
+  cursor: pointer;
+  background-color: #02d1ff;
+}
+
+.gameover-btns {
+  display: none; /* hide by default */
+}
+
+.gameover-btns.show {
+  display: flex; /* show when gameover is triggered */
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameover {
+  /* add styling to match the rest of the document */
+  background-color: #69ca46;
+  border: 8px solid #006b0b;
+  border-radius: 24px;
+  width: 50%;
+  height: 5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gameover:hover {
+  cursor: pointer;
+  background-color: #02d1ff;
+}
+
